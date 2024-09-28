@@ -1,0 +1,24 @@
+{
+  "name": "users-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.ts ",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "nodemon": "^3.1.7",
+    "prisma": "^5.20.0",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@prisma/client": "5.20.0",
+    "@types/node": "^22.7.4",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "ts-node": "^10.9.2"
+  }
+}
