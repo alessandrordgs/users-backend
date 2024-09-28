@@ -14,6 +14,6 @@ model User {
   perfil   String
   telefone String
   idade    Int
-  created  DateTime @default(now())
-  updated  DateTime @updatedAt
+  created_at  DateTime @default(now())
+  updated_at DateTime @updatedAt
 }
