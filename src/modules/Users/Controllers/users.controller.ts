@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from "express";
 import { IUserServices } from "../Interfaces/IUserServices";
 import UserServices from "../Services/users.services";
 import paginate from '../../../globals/paginate';
+import { Prisma } from "@prisma/client";
 class UserController {
   private userService: IUserServices;
   constructor() {
@@ -40,6 +41,13 @@ class UserController {
       return response.status(201).json(newUser);
     } catch (error: Error | any) {
       console.log(error)
+
+      if (error instanceof Prisma.PrismaClientKnownRequestError) {
+        // The .code property can be accessed in a type-safe manner
+        if (error.code === 'P2002') {
+          return response.status(400).json({ message: "O email deve ser único" });
+        }
+      }
       if (error?.name === 'ValidationError') {
         return response.status(400).json({ message: error?.message });
       }
