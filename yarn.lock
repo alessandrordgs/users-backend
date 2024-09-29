@@ -298,6 +298,11 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
+"@faker-js/faker@^9.0.3":
+  version "9.0.3"
+  resolved "https://registry.yarnpkg.com/@faker-js/faker/-/faker-9.0.3.tgz#be817db896b07d1716bc65d9aad1ba587b499826"
+  integrity sha512-lWrrK4QNlFSU+13PL9jMbMKLJYXDFu3tQfayBsMXX7KL/GiQeqfB1CzHkqD5UHBUtPAuPo6XwGbMFNdVMZObRA==
+
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@istanbuljs/load-nyc-config/-/load-nyc-config-1.1.0.tgz#fd3db1d59ecf7cf121e80650bb86712f9b55eced"

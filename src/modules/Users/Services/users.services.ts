@@ -17,7 +17,7 @@ class UserService implements IUserServices {
       email: yup.string().email().required("Email é obrigatório"),
       perfil: yup.string().required("Perfil é obrigatório"),
       telefone: yup.string().required("Telefone é obrigatório"),
-      idade: yup.number().required().positive().integer(),
+      idade: yup.number().nullable(),
     })
 
     return userSchema.validate(data, { abortEarly: false })
